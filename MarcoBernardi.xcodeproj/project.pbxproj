@@ -24,6 +24,8 @@
 		1BEB8E0522524CB3004FA348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BEB8E0422524CB3004FA348 /* Assets.xcassets */; };
 		1BEB8E0822524CB3004FA348 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEB8E0622524CB3004FA348 /* LaunchScreen.storyboard */; };
 		1BEB8E10225263CA004FA348 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB8E0F225263CA004FA348 /* LoginController.swift */; };
+		1BFACB3F2292EE3700DE0121 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB3E2292EE3700DE0121 /* MainTabBarController.swift */; };
+		1BFACB412292F22100DE0121 /* UIUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB402292F22100DE0121 /* UIUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		1BEB8E0722524CB3004FA348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BEB8E0922524CB3004FA348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BEB8E0F225263CA004FA348 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		1BFACB3E2292EE3700DE0121 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		1BFACB402292F22100DE0121 /* UIUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				1B97B04222577D93004F46EF /* RegisterController.swift */,
 				1B92887A225B9DBA00222CB7 /* HomeController.swift */,
 				1B69946E2280879200B46A0D /* DettaglioEventoController.swift */,
+				1BFACB3E2292EE3700DE0121 /* MainTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				1B928872225B854100222CB7 /* LoginUtility.swift */,
 				1B69946822806E6200B46A0D /* NetworkUtility.swift */,
 				1B69946A2280715D00B46A0D /* DateUtility.swift */,
+				1BFACB402292F22100DE0121 /* UIUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 			files = (
 				1B928871225B846600222CB7 /* Utente.swift in Sources */,
 				1BEB8DFE22524CAE004FA348 /* AppDelegate.swift in Sources */,
+				1BFACB3F2292EE3700DE0121 /* MainTabBarController.swift in Sources */,
 				1B69946B2280715D00B46A0D /* DateUtility.swift in Sources */,
 				1B928875225B86F500222CB7 /* SplashController.swift in Sources */,
 				1B69946F2280879200B46A0D /* DettaglioEventoController.swift in Sources */,
@@ -222,6 +229,7 @@
 				1BEB8E10225263CA004FA348 /* LoginController.swift in Sources */,
 				1B928877225B912300222CB7 /* Evento.swift in Sources */,
 				1B97B04322577D93004F46EF /* RegisterController.swift in Sources */,
+				1BFACB412292F22100DE0121 /* UIUtility.swift in Sources */,
 				1B0CC2442289AD840088054C /* CellOggettoAcquistabile.swift in Sources */,
 				1B0CC2422289A68E0088054C /* OggettoAcquistabile.swift in Sources */,
 				1B69946922806E6300B46A0D /* NetworkUtility.swift in Sources */,
