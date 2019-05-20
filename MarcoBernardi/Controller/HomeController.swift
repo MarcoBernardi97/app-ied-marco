@@ -20,6 +20,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         super.viewDidLoad()
         
+        navigationItem.title = "Lista Eventi"
+        
         //Questo serve per comincare con la TableView
         tableView.delegate = self
         tableView.dataSource = self

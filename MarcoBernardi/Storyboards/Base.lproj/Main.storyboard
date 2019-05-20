@@ -636,10 +636,10 @@
             </objects>
             <point key="canvasLocation" x="5351" y="-322"/>
         </scene>
-        <!--View Controller-->
+        <!--Mappa Controller-->
         <scene sceneID="eOe-PQ-fhy">
             <objects>
-                <viewController id="8St-TN-MRp" sceneMemberID="viewController">
+                <viewController id="8St-TN-MRp" customClass="MappaController" customModule="MarcoBernardi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="itM-Zs-n4E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -658,6 +658,9 @@
                         <viewLayoutGuide key="safeArea" id="afx-Nt-GVQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="XXw-QN-jDY"/>
+                    <connections>
+                        <outlet property="mapView" destination="NUT-rn-MeL" id="VeD-xj-tpH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BG1-Tm-W3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
