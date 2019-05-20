@@ -33,6 +33,15 @@ class MappaController: UIViewController {
         //mostro la mia posizione sulla mappa
         mapView.showsUserLocation = true
         
+        //aggiungo i pin sulla mappa
+        for evento in Database.eventi {
+            //creo pin
+            let pin = PinMappa.init(conEvento: evento)
+            
+            //lo aggiungo sulla mappa
+            mapView.addAnnotation(pin)
+        }
+        
         
     }
 

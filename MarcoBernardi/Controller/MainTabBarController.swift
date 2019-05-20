@@ -34,6 +34,7 @@ class MainTabBarController: UITabBarController {
                 itemMap.title = "Map"
                 
                 let image = UIImage(named: "iconMap")
+                
                
                 itemMap.image = UIUtility.resizeImage(image, targetSize: dimensioniIcone)
             }

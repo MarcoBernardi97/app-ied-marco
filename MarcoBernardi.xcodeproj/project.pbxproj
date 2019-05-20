@@ -27,6 +27,8 @@
 		1BFACB3F2292EE3700DE0121 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB3E2292EE3700DE0121 /* MainTabBarController.swift */; };
 		1BFACB412292F22100DE0121 /* UIUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB402292F22100DE0121 /* UIUtility.swift */; };
 		1BFACB432292FDD500DE0121 /* MappaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB422292FDD500DE0121 /* MappaController.swift */; };
+		1BFACB45229302C000DE0121 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB44229302C000DE0121 /* Database.swift */; };
+		1BFACB47229306F100DE0121 /* PinMappa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFACB46229306F100DE0121 /* PinMappa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		1BFACB3E2292EE3700DE0121 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1BFACB402292F22100DE0121 /* UIUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtility.swift; sourceTree = "<group>"; };
 		1BFACB422292FDD500DE0121 /* MappaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappaController.swift; sourceTree = "<group>"; };
+		1BFACB44229302C000DE0121 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		1BFACB46229306F100DE0121 /* PinMappa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMappa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				1B928870225B846600222CB7 /* Utente.swift */,
 				1B928876225B912300222CB7 /* Evento.swift */,
 				1B0CC2412289A68E0088054C /* OggettoAcquistabile.swift */,
+				1BFACB46229306F100DE0121 /* PinMappa.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1BEB8DFD22524CAE004FA348 /* AppDelegate.swift */,
+				1BFACB44229302C000DE0121 /* Database.swift */,
 				1B0CC2472289BB1D0088054C /* Models */,
 				1B0CC2462289BAEF0088054C /* Views */,
 				1B0CC2452289BAD70088054C /* Controller */,
@@ -226,6 +232,7 @@
 				1BFACB432292FDD500DE0121 /* MappaController.swift in Sources */,
 				1B69946B2280715D00B46A0D /* DateUtility.swift in Sources */,
 				1B928875225B86F500222CB7 /* SplashController.swift in Sources */,
+				1BFACB45229302C000DE0121 /* Database.swift in Sources */,
 				1B69946F2280879200B46A0D /* DettaglioEventoController.swift in Sources */,
 				1B928873225B854100222CB7 /* LoginUtility.swift in Sources */,
 				1B928879225B9AC500222CB7 /* CellEvento.swift in Sources */,
@@ -233,6 +240,7 @@
 				1BEB8E10225263CA004FA348 /* LoginController.swift in Sources */,
 				1B928877225B912300222CB7 /* Evento.swift in Sources */,
 				1B97B04322577D93004F46EF /* RegisterController.swift in Sources */,
+				1BFACB47229306F100DE0121 /* PinMappa.swift in Sources */,
 				1BFACB412292F22100DE0121 /* UIUtility.swift in Sources */,
 				1B0CC2442289AD840088054C /* CellOggettoAcquistabile.swift in Sources */,
 				1B0CC2422289A68E0088054C /* OggettoAcquistabile.swift in Sources */,
