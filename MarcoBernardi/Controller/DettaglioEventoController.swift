@@ -60,7 +60,7 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         
         //calcolo il prezzo
         if let prezzo = evento.prezzo, prezzo > 0.0 {
-            labelPrezzo.text = String(format: "%.2f €", prezzo)
+            labelPrezzo.text = String(format: "da %.2f €", prezzo)
         } else {
             labelPrezzo.text = "Gratis"
         }

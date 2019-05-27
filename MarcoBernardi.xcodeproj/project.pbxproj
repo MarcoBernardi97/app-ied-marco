@@ -19,6 +19,7 @@
 		1B928879225B9AC500222CB7 /* CellEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B928878225B9AC500222CB7 /* CellEvento.swift */; };
 		1B92887B225B9DBA00222CB7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92887A225B9DBA00222CB7 /* HomeController.swift */; };
 		1B939B2A229C377B008589E6 /* LocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B939B29229C377B008589E6 /* LocationUtility.swift */; };
+		1B939B2D229C3DE5008589E6 /* IEDNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B939B2C229C3DE5008589E6 /* IEDNetworking.swift */; };
 		1B97B04322577D93004F46EF /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97B04222577D93004F46EF /* RegisterController.swift */; };
 		1BEB8DFE22524CAE004FA348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB8DFD22524CAE004FA348 /* AppDelegate.swift */; };
 		1BEB8E0322524CAE004FA348 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEB8E0122524CAE004FA348 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		1B928878225B9AC500222CB7 /* CellEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEvento.swift; sourceTree = "<group>"; };
 		1B92887A225B9DBA00222CB7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		1B939B29229C377B008589E6 /* LocationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtility.swift; sourceTree = "<group>"; };
+		1B939B2C229C3DE5008589E6 /* IEDNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEDNetworking.swift; sourceTree = "<group>"; };
 		1B97B04222577D93004F46EF /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		1BEB8DFA22524CAE004FA348 /* MarcoBernardi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoBernardi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEB8DFD22524CAE004FA348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		1B939B2B229C3DC2008589E6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1B939B2C229C3DE5008589E6 /* IEDNetworking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		1BEB8DF122524CAE004FA348 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 				1B0CC2462289BAEF0088054C /* Views */,
 				1B0CC2452289BAD70088054C /* Controller */,
 				1B0CC2482289BB6E0088054C /* Utilities */,
+				1B939B2B229C3DC2008589E6 /* Network */,
 				1B0CC2492289BBAA0088054C /* Storyboards */,
 				1BEB8E0422524CB3004FA348 /* Assets.xcassets */,
 				1BEB8E0922524CB3004FA348 /* Info.plist */,
@@ -244,6 +255,7 @@
 				1BEB8E10225263CA004FA348 /* LoginController.swift in Sources */,
 				1B928877225B912300222CB7 /* Evento.swift in Sources */,
 				1B97B04322577D93004F46EF /* RegisterController.swift in Sources */,
+				1B939B2D229C3DE5008589E6 /* IEDNetworking.swift in Sources */,
 				1BFACB47229306F100DE0121 /* PinMappa.swift in Sources */,
 				1BFACB412292F22100DE0121 /* UIUtility.swift in Sources */,
 				1B0CC2442289AD840088054C /* CellOggettoAcquistabile.swift in Sources */,
