@@ -18,6 +18,7 @@
 		1B928877225B912300222CB7 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B928876225B912300222CB7 /* Evento.swift */; };
 		1B928879225B9AC500222CB7 /* CellEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B928878225B9AC500222CB7 /* CellEvento.swift */; };
 		1B92887B225B9DBA00222CB7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92887A225B9DBA00222CB7 /* HomeController.swift */; };
+		1B939B2A229C377B008589E6 /* LocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B939B29229C377B008589E6 /* LocationUtility.swift */; };
 		1B97B04322577D93004F46EF /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97B04222577D93004F46EF /* RegisterController.swift */; };
 		1BEB8DFE22524CAE004FA348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB8DFD22524CAE004FA348 /* AppDelegate.swift */; };
 		1BEB8E0322524CAE004FA348 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEB8E0122524CAE004FA348 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		1B928876225B912300222CB7 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		1B928878225B9AC500222CB7 /* CellEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEvento.swift; sourceTree = "<group>"; };
 		1B92887A225B9DBA00222CB7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		1B939B29229C377B008589E6 /* LocationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtility.swift; sourceTree = "<group>"; };
 		1B97B04222577D93004F46EF /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		1BEB8DFA22524CAE004FA348 /* MarcoBernardi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoBernardi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEB8DFD22524CAE004FA348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1B928872225B854100222CB7 /* LoginUtility.swift */,
+				1B939B29229C377B008589E6 /* LocationUtility.swift */,
 				1B69946822806E6200B46A0D /* NetworkUtility.swift */,
 				1B69946A2280715D00B46A0D /* DateUtility.swift */,
 				1BFACB402292F22100DE0121 /* UIUtility.swift */,
@@ -231,6 +234,7 @@
 				1BFACB3F2292EE3700DE0121 /* MainTabBarController.swift in Sources */,
 				1BFACB432292FDD500DE0121 /* MappaController.swift in Sources */,
 				1B69946B2280715D00B46A0D /* DateUtility.swift in Sources */,
+				1B939B2A229C377B008589E6 /* LocationUtility.swift in Sources */,
 				1B928875225B86F500222CB7 /* SplashController.swift in Sources */,
 				1BFACB45229302C000DE0121 /* Database.swift in Sources */,
 				1B69946F2280879200B46A0D /* DettaglioEventoController.swift in Sources */,

@@ -393,7 +393,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indirizzo evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hJ-NI-330">
-                                <rect key="frame" x="16" y="323" width="187" height="20"/>
+                                <rect key="frame" x="16" y="312" width="335" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -517,6 +517,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distanza da posizione utente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-mM-lGW">
+                                <rect key="frame" x="16" y="334" width="335" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkE-uI-EnS"/>
@@ -526,6 +533,7 @@
                         <outlet property="imageCopertina" destination="P6k-9l-lw9" id="io1-o3-ZiA"/>
                         <outlet property="labelData" destination="yHk-Cf-fa5" id="KAg-MO-Uq3"/>
                         <outlet property="labelDescrizione" destination="W0X-Qd-S63" id="KKZ-F4-hL9"/>
+                        <outlet property="labelDistanza" destination="U8f-mM-lGW" id="gOn-8I-T4l"/>
                         <outlet property="labelIndirizzo" destination="4hJ-NI-330" id="TQJ-hZ-s7y"/>
                         <outlet property="labelNome" destination="80z-wS-RzV" id="JLE-83-hrU"/>
                         <outlet property="labelPrezzo" destination="Nzz-LZ-JBP" id="Jmw-j7-eCV"/>
@@ -533,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03c-Lw-xRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7126" y="-322"/>
+            <point key="canvasLocation" x="7125.6000000000004" y="-322.48875562218893"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U51-WR-5u3">
@@ -647,6 +655,28 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-rn-MeL">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsE-Kr-7ab" customClass="UIButton">
+                                <rect key="frame" x="303" y="80" width="56" height="56"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gps" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-rK-PVQ">
+                                        <rect key="frame" x="16" y="16" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Q2z-ZP-dlJ"/>
+                                            <constraint firstAttribute="height" constant="24" id="sHn-dJ-Ifa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="d5E-rK-PVQ" secondAttribute="bottom" constant="16" id="0Np-RE-FTW"/>
+                                    <constraint firstAttribute="trailing" secondItem="d5E-rK-PVQ" secondAttribute="trailing" constant="16" id="NIl-2o-Py0"/>
+                                    <constraint firstItem="d5E-rK-PVQ" firstAttribute="leading" secondItem="XsE-Kr-7ab" secondAttribute="leading" constant="16" id="WB1-8T-ylH"/>
+                                    <constraint firstItem="d5E-rK-PVQ" firstAttribute="top" secondItem="XsE-Kr-7ab" secondAttribute="top" constant="16" id="yQW-wP-qhl"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonCentraPosizioneUtente:" destination="8St-TN-MRp" eventType="touchUpInside" id="MpP-VK-36G"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -654,17 +684,20 @@
                             <constraint firstItem="NUT-rn-MeL" firstAttribute="top" secondItem="afx-Nt-GVQ" secondAttribute="top" id="ahX-N6-acI"/>
                             <constraint firstItem="afx-Nt-GVQ" firstAttribute="trailing" secondItem="NUT-rn-MeL" secondAttribute="trailing" id="gU7-dk-X1f"/>
                             <constraint firstItem="afx-Nt-GVQ" firstAttribute="bottom" secondItem="NUT-rn-MeL" secondAttribute="bottom" id="i4K-Sh-MFo"/>
+                            <constraint firstItem="afx-Nt-GVQ" firstAttribute="trailing" secondItem="XsE-Kr-7ab" secondAttribute="trailing" constant="16" id="qBi-9D-Rtn"/>
+                            <constraint firstItem="XsE-Kr-7ab" firstAttribute="top" secondItem="afx-Nt-GVQ" secondAttribute="top" constant="16" id="uzM-d1-nHG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="afx-Nt-GVQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="XXw-QN-jDY"/>
                     <connections>
+                        <outlet property="buttonCentraPosizioneUtente" destination="XsE-Kr-7ab" id="pWp-YR-Ho9"/>
                         <outlet property="mapView" destination="NUT-rn-MeL" id="VeD-xj-tpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BG1-Tm-W3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6186" y="392"/>
+            <point key="canvasLocation" x="6184.8000000000002" y="391.75412293853077"/>
         </scene>
         <!--Item-->
         <scene sceneID="od4-ep-T80">
@@ -689,6 +722,7 @@
     <resources>
         <image name="LogoApp" width="200" height="200"/>
         <image name="SfondoLogin" width="626" height="417"/>
+        <image name="gps" width="512" height="512"/>
         <image name="logoFacebook" width="1000" height="750"/>
         <image name="logoGoogle" width="1024" height="1024"/>
     </resources>

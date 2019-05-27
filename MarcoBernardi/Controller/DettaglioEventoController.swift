@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MapKit
 
 class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var evento: Evento?
+    var miaPosizione: CLLocation?
     
     //MARK: - Outlets
     
@@ -27,6 +29,8 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var labelData: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var labelDistanza: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +58,24 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         
         labelData.text = DateUtility.stringa(conData: evento.data, formato: "dd/MM/yyyy HH:mm")
         
+        //calcolo il prezzo
         if let prezzo = evento.prezzo, prezzo > 0.0 {
             labelPrezzo.text = String(format: "%.2f €", prezzo)
         } else {
             labelPrezzo.text = "Gratis"
+        }
+        
+        //calcolo la distanza tra evento e utente
+        if let distanza = LocationUtility.distanza(da: evento.coordinate, a: miaPosizione?.coordinate){
+            
+            let distanzaInChilometri = distanza / 1000.0
+            let stringaDistanza = String.init(format: "%.1f", distanzaInChilometri)
+            
+            labelDistanza.text = "L'evento è a \(stringaDistanza) km da te!"
+            labelDistanza.isHidden = false
+        }
+        else {
+            labelDistanza.isHidden = true
         }
         
     }
