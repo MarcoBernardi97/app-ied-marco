@@ -32,6 +32,8 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBOutlet weak var labelDistanza: UILabel!
     
+    @IBOutlet weak var labelMeteo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,23 +61,37 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         labelData.text = DateUtility.stringa(conData: evento.data, formato: "dd/MM/yyyy HH:mm")
         
         //calcolo il prezzo
-        if let prezzo = evento.prezzo, prezzo > 0.0 {
+        if let prezzo = evento.prezzo, prezzo > 0.0
+        {
             labelPrezzo.text = String(format: "da %.2f €", prezzo)
-        } else {
+        }
+        else
+        {
             labelPrezzo.text = "Gratis"
         }
         
         //calcolo la distanza tra evento e utente
-        if let distanza = LocationUtility.distanza(da: evento.coordinate, a: miaPosizione?.coordinate){
-            
+        if let distanza = LocationUtility.distanza(da: evento.coordinate, a: miaPosizione?.coordinate)
+        {
             let distanzaInChilometri = distanza / 1000.0
             let stringaDistanza = String.init(format: "%.1f", distanzaInChilometri)
             
             labelDistanza.text = "L'evento è a \(stringaDistanza) km da te!"
             labelDistanza.isHidden = false
         }
-        else {
+        else
+        {
             labelDistanza.isHidden = true
+        }
+        labelMeteo.text = "Caricamento meteo in corso..."
+        Network.richiestaMeteoEvento(evento) {
+            //questo codice viene eseguito solo quando viene ricevuto il meteo dal server
+            (meteo) in
+            if let temperatura = meteo?.temperatura{
+                if let descrizione = meteo?.descrizione{
+                    self.labelMeteo.text = ("La temperatura è di \(temperatura)°C, \(descrizione).")
+                }
+            }
         }
         
     }
@@ -111,4 +127,6 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         
         return CGSize(width: larghezza, height: altezza)
     }
+    
+    
 }
