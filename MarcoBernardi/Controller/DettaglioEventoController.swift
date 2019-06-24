@@ -34,6 +34,8 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBOutlet weak var labelMeteo: UILabel!
     
+    @IBOutlet weak var buttonCarrello: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +56,7 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         
         labelIndirizzo.text = evento.indirizzo
         
-        NetworkUtility.downloadImmagine(indirizzoWeb: evento.copertinaUrl, perImageView: imageCopertina)
+        NetworkUtility.downloadImmagine(indirizzoWeb: evento.immagineURL, perImageView: imageCopertina)
         
         labelDescrizione.text = evento.descrizione
         
@@ -115,6 +117,32 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         return cella
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Prendo l'oggetto dagli oggetti acquistabili
+        guard let oggetto = evento?.oggettiAcquistabili?[indexPath.item] else {
+            return
+        }
+        
+        chiediConfermaAcquisto(oggetto: oggetto)
+        
+    }
+    
+    func chiediConfermaAcquisto(oggetto: OggettoAcquistabile?){
+        //Prendo l'oggetto dagli oggetti acquistabili
+        guard let oggetto = oggetto else {
+            return
+        }
+        
+        //1.Mostriamo l'alert di conferma
+        AlertUtility.mostraAlertDiConferma(conTitolo: "Vuoi aggiungere l'evento al carrello?", messaggio: oggetto.nome, viewController: self) { (sceltaUtente) in
+            if sceltaUtente{
+                //L'utente ha scelto si
+                //Locationutility.navigaVerso(evento: self.evento)
+                CartUtility.aggiungiAlCarrello(oggetto)
+            }
+        }
+    }
     //MARK: - CollectionView layout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -128,5 +156,10 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         return CGSize(width: larghezza, height: altezza)
     }
     
+    @IBAction func aggiungiAlCarrello(_ sender: Any){
+        chiediConfermaAcquisto(oggetto: evento)
+    }
+    
     
 }
+

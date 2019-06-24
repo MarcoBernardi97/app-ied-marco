@@ -8,7 +8,15 @@
 
 import UIKit
 
-class OggettoAcquistabile {
+class OggettoAcquistabile: Comparable {
+    
+    static func < (lhs: OggettoAcquistabile, rhs: OggettoAcquistabile) -> Bool {
+        return (lhs.id ?? 0) < (rhs.id ?? 0)
+    }
+    
+    static func == (lhs: OggettoAcquistabile, rhs: OggettoAcquistabile) -> Bool {
+        return lhs.nome == rhs.nome
+    }
 
     var id: Int?
     

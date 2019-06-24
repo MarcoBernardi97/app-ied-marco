@@ -9,11 +9,8 @@
 import UIKit
 import MapKit
 
-class Evento {
-    var id : Int?
-    
-    var nome : String?
-    
+class Evento: OggettoAcquistabile {
+   
     var descrizione : String?
     
     var data : Date?
@@ -21,10 +18,6 @@ class Evento {
     var indirizzo : String?
     
     var coordinate: CLLocationCoordinate2D?
-    
-    var prezzo : Double?
-    
-    var copertinaUrl : String?
     
     var oggettiAcquistabili: [OggettoAcquistabile]?
 }

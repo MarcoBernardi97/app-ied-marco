@@ -20,7 +20,7 @@ class Database {
         eventoUno.indirizzo = "V.le Oceano Atlantico"
         eventoUno.coordinate = CLLocationCoordinate2D.init(latitude: 41.8192529, longitude: 12.4674779)
         eventoUno.prezzo = 30.0
-        eventoUno.copertinaUrl = "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
+        eventoUno.immagineURL = "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
         eventoUno.descrizione = "L'esibizione inizia alle ore 20.30"
         
         //creo un oggetto acquistabile
@@ -47,7 +47,7 @@ class Database {
         due.indirizzo = "Via Alcamo 11"
         due.coordinate = CLLocationCoordinate2D.init(latitude: 41.8887741, longitude: 12.524077799999999)
         due.prezzo = 55.0
-        due.copertinaUrl = "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
+        due.immagineURL = "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
         due.descrizione = "La lezione è dalle 15.00 alle 18.00"
         
       
@@ -62,7 +62,7 @@ class Database {
         tre.indirizzo = "Duomo di Milano"
         tre.coordinate = CLLocationCoordinate2D.init(latitude: 45.4640658, longitude: 9.1906621)
         tre.prezzo = 55.0
-        tre.copertinaUrl = "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
+        tre.immagineURL = "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
         tre.descrizione = "La lezione è dalle 15.00 alle 18.00"
         
         

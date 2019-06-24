@@ -37,7 +37,7 @@ class CellEvento: UITableViewCell {
         }
         
         //metto immagine di copertina
-        NetworkUtility.downloadImmagine(indirizzoWeb: evento.copertinaUrl, perImageView: imageCopertina)
+        NetworkUtility.downloadImmagine(indirizzoWeb: evento.immagineURL, perImageView: imageCopertina)
         
         //metto data evento
         labelData.text = DateUtility.stringa(conData: evento.data, formato: "dd/MM/yyyy")

@@ -531,11 +531,20 @@
                                 <color key="textColor" red="0.9408223121" green="0.99348045279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-ov-GqC">
+                                <rect key="frame" x="253" y="276" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Compra subito!"/>
+                                <connections>
+                                    <action selector="aggiungiAlCarrello:" destination="YdV-HZ-8LH" eventType="touchUpInside" id="Aem-1v-Cah"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkE-uI-EnS"/>
                     </view>
                     <connections>
+                        <outlet property="buttonCarrello" destination="JFG-ov-GqC" id="XS6-Fh-648"/>
                         <outlet property="collectionView" destination="XN3-jb-SDJ" id="H82-4M-oe8"/>
                         <outlet property="imageCopertina" destination="P6k-9l-lw9" id="io1-o3-ZiA"/>
                         <outlet property="labelData" destination="yHk-Cf-fa5" id="KAg-MO-Uq3"/>
@@ -550,6 +559,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03c-Lw-xRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7125.6000000000004" y="-322.48875562218893"/>
+        </scene>
+        <!--Cart Controller-->
+        <scene sceneID="b38-Tj-AcI">
+            <objects>
+                <viewController storyboardIdentifier="CartController" id="t9t-hZ-A5Z" customClass="CartController" customModule="MarcoBernardi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="84e-ph-MeK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7lo-df-3BV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellCarrello" id="fuJ-Ti-wOb" customClass="CellCarrello" customModule="MarcoBernardi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fuJ-Ti-wOb" id="Isi-uI-StT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLW-RZ-4QJ">
+                                                    <rect key="frame" x="20" y="8" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCF-n0-pet" userLabel="Label Tipo">
+                                                    <rect key="frame" x="20" y="31" width="335" height="13"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="MLW-RZ-4QJ" secondAttribute="trailing" constant="20" id="0wO-Jx-dYD"/>
+                                                <constraint firstItem="hCF-n0-pet" firstAttribute="top" secondItem="MLW-RZ-4QJ" secondAttribute="bottom" constant="2" id="9tj-4G-nVW"/>
+                                                <constraint firstItem="MLW-RZ-4QJ" firstAttribute="top" secondItem="Isi-uI-StT" secondAttribute="top" constant="8" id="JIb-Wm-C8D"/>
+                                                <constraint firstAttribute="trailing" secondItem="hCF-n0-pet" secondAttribute="trailing" constant="20" id="V3U-BW-dM2"/>
+                                                <constraint firstItem="hCF-n0-pet" firstAttribute="leading" secondItem="Isi-uI-StT" secondAttribute="leading" constant="20" id="cBY-a4-aw1"/>
+                                                <constraint firstItem="MLW-RZ-4QJ" firstAttribute="leading" secondItem="Isi-uI-StT" secondAttribute="leading" constant="20" id="gd1-WJ-SZ5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelNome" destination="MLW-RZ-4QJ" id="fRx-K8-Os1"/>
+                                            <outlet property="labelTipo" destination="hCF-n0-pet" id="dfZ-im-X6D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nessun oggetto nel carrello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5f-3S-adE">
+                                <rect key="frame" x="0.0" y="323.5" width="375" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UKB-uf-U6T" firstAttribute="trailing" secondItem="H5f-3S-adE" secondAttribute="trailing" id="HtD-1A-d1T"/>
+                            <constraint firstItem="7lo-df-3BV" firstAttribute="leading" secondItem="UKB-uf-U6T" secondAttribute="leading" id="JKV-rT-rRN"/>
+                            <constraint firstItem="UKB-uf-U6T" firstAttribute="bottom" secondItem="7lo-df-3BV" secondAttribute="bottom" id="Poe-Z5-QE5"/>
+                            <constraint firstItem="UKB-uf-U6T" firstAttribute="trailing" secondItem="7lo-df-3BV" secondAttribute="trailing" id="RdR-k6-wba"/>
+                            <constraint firstItem="7lo-df-3BV" firstAttribute="top" secondItem="UKB-uf-U6T" secondAttribute="top" id="SjX-Zg-gPf"/>
+                            <constraint firstItem="H5f-3S-adE" firstAttribute="leading" secondItem="UKB-uf-U6T" secondAttribute="leading" id="eNp-sG-KMW"/>
+                            <constraint firstItem="H5f-3S-adE" firstAttribute="centerY" secondItem="84e-ph-MeK" secondAttribute="centerY" id="q3F-bc-qYC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UKB-uf-U6T"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelNessunArticolo" destination="H5f-3S-adE" id="dhz-Cz-rEo"/>
+                        <outlet property="tableView" destination="7lo-df-3BV" id="sMg-ZS-M5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPF-gk-rnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7789.6000000000004" y="-322.48875562218893"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U51-WR-5u3">

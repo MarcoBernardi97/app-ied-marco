@@ -28,6 +28,35 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         listaEventi = Database.eventi
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        aggiornaPulsanteCarrello()
+    }
+    
+    //MARK: - Funzioni
+    func aggiornaPulsanteCarrello (){
+        let buttonCarrello = UIBarButtonItem.init(image: CartUtility.iconaCarrello(), style: .plain, target: self, action: #selector(apriCarrello))
+        navigationItem.rightBarButtonItem = buttonCarrello
+    }
+    
+    @objc func apriCarrello(){
+        
+        //instanzio lo storyboard che contiene il view controller
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //instanzio il view controller del carrello
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CartController")
+        
+        //creo un navigation controller (per averte la barra superiore)
+        let navigationController = UINavigationController.init(rootViewController: viewController)
+        
+        //presento il viewController come "modale"
+        present(navigationController, animated: true)
+        
+    }
+    
+    
+    
     //MARK: - TableView delegate
     
     //In questa funzione l'HomeController comunica alla TableView quante righe deve disegnare
