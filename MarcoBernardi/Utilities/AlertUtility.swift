@@ -40,5 +40,22 @@ class AlertUtility {
         //4. Aggiungo l'azione all'alert
         viewController.present(alert, animated: true)
     }
+    
+    static func mostraAlertSemplice(titolo: String?, messaggio: String?, viewController: UIViewController?){
+        
+        //1. Creo alert
+        let alert = UIAlertController.init(title: titolo, message: messaggio, preferredStyle: .alert)
+        
+        //2. Creo l'azione del tasto "ok"
+        let actionChiudi = UIAlertAction(title: "OK 👍🏼", style: .default)
+        
+        //3. Aggiungo l'azione all'alert
+        alert.addAction(actionChiudi)
+        
+        //4. Mostro l'alert
+        viewController?.present(alert, animated: true)
+        
+        
+    }
 }
 

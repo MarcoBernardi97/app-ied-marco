@@ -18,6 +18,7 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var buttonAccedi: UIButton!
     
+    
     // MARK: - Setup della schermata
     
     override func viewDidLoad() {    // Do any additional setup after loading the view.
@@ -37,22 +38,54 @@ class LoginController: UIViewController {
 
        
     }
+    
+    // MARK: - Funcions
+    
+    private func controllaValiditaDatiInseriti() -> Bool {
+        
+        //controllo campo dell'email
+        if textEmail.text == nil || textEmail.text == "" {
+            print("Devi specificare l'email")
+            return false
+        }
+        
+        //controllo campo della password
+        if textPassword.text == nil || textPassword.text == "" {
+            print("Devi specificare la password")
+            return false
+        }
+        
+        //tutto confermato
+        return true
+    }
 
     // MARK: - Actions
     
     @IBAction func buttonAccedi(_ sender: Any) {
-        if textEmail.text == "gmail.com" {
-           
-            if textPassword.text == "password" {
-                print("Accesso eseguito")
-                performSegue(withIdentifier: "VaiAllaHome", sender: self)
+      
+        guard controllaValiditaDatiInseriti() else {
+            //dati non validi
+            return
+        }
+        
+        Network.richiestaLogin(conEmail: textEmail.text, password: textPassword.text) {
+            (utente) in
+            if let utente = utente {
+                
+                print("Login Riuscito")
+                
+                //salvo in memoria l'utente appena ricevuto dal server
+                LoginUtility.utenteConnesso = utente
+                
+                //vado alla schermata principale dell'app
+                self.performSegue(withIdentifier: "VaiAllaHome", sender: self)
+            }
+            else {
+                AlertUtility.mostraAlertSemplice(titolo: "Login fallito", messaggio: "Prova a controllare email o password", viewController: self)
             }
         }
-        else
-        {
-            print("Accesso negato")
-            
-        }
+    print("Dati validi")
+        
     }
 }
     

@@ -38,6 +38,18 @@ class MainTabBarController: UITabBarController {
                
                 itemMap.image = UIUtility.resizeImage(image, targetSize: dimensioniIcone)
             }
+            
+            //Profilo
+            if tabBarItem.count >= 3 {
+                let itemProfile = tabBarItem [2]
+                
+                itemProfile.title = "Profile"
+                
+                let image = UIImage(named: "iconProfile")
+                
+                
+                itemProfile.image = UIUtility.resizeImage(image, targetSize: dimensioniIcone)
+            }
         }
     }
     

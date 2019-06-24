@@ -12,6 +12,8 @@
 		1B69946922806E6300B46A0D /* NetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B69946822806E6200B46A0D /* NetworkUtility.swift */; };
 		1B69946B2280715D00B46A0D /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B69946A2280715D00B46A0D /* DateUtility.swift */; };
 		1B69946F2280879200B46A0D /* DettaglioEventoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B69946E2280879200B46A0D /* DettaglioEventoController.swift */; };
+		1B716B8222C1473500B89748 /* BenvenutoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B716B8122C1473500B89748 /* BenvenutoController.swift */; };
+		1B716B8522C151DC00B89748 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B716B8422C151DC00B89748 /* ProfileController.swift */; };
 		1B71906522C10FDA00E21DC5 /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71906222C10FDA00E21DC5 /* AlertUtility.swift */; };
 		1B71906622C10FDA00E21DC5 /* Locationutility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71906322C10FDA00E21DC5 /* Locationutility.swift */; };
 		1B71906922C10FE600E21DC5 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71906822C10FE600E21DC5 /* CartController.swift */; };
@@ -48,6 +50,9 @@
 		1B69946822806E6200B46A0D /* NetworkUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtility.swift; sourceTree = "<group>"; };
 		1B69946A2280715D00B46A0D /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		1B69946E2280879200B46A0D /* DettaglioEventoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettaglioEventoController.swift; sourceTree = "<group>"; };
+		1B716B8022C1345E00B89748 /* CartUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUtility.swift; sourceTree = "<group>"; };
+		1B716B8122C1473500B89748 /* BenvenutoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenvenutoController.swift; sourceTree = "<group>"; };
+		1B716B8422C151DC00B89748 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		1B71906222C10FDA00E21DC5 /* AlertUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
 		1B71906322C10FDA00E21DC5 /* Locationutility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Locationutility.swift; path = "../../../../../../Volumes/ESD-USB/Locationutility.swift"; sourceTree = "<group>"; };
 		1B71906822C10FE600E21DC5 /* CartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartController.swift; path = "../../../../../../Volumes/Bernardi HD/Carrello/CartController.swift"; sourceTree = "<group>"; };
@@ -96,7 +101,9 @@
 			children = (
 				1B71906822C10FE600E21DC5 /* CartController.swift */,
 				1B928874225B86F500222CB7 /* SplashController.swift */,
+				1B716B8422C151DC00B89748 /* ProfileController.swift */,
 				1BEB8E0F225263CA004FA348 /* LoginController.swift */,
+				1B716B8122C1473500B89748 /* BenvenutoController.swift */,
 				1B97B04222577D93004F46EF /* RegisterController.swift */,
 				1B92887A225B9DBA00222CB7 /* HomeController.swift */,
 				1B69946E2280879200B46A0D /* DettaglioEventoController.swift */,
@@ -152,6 +159,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		1B716B7F22C1345E00B89748 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B716B8022C1345E00B89748 /* CartUtility.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1B71906E22C110E700E21DC5 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +212,7 @@
 				1B0CC2482289BB6E0088054C /* Utilities */,
 				1B939B2B229C3DC2008589E6 /* Network */,
 				1B71906E22C110E700E21DC5 /* Framework */,
+				1B716B7F22C1345E00B89748 /* Resources */,
 				1B0CC2492289BBAA0088054C /* Storyboards */,
 				1BEB8E0422524CB3004FA348 /* Assets.xcassets */,
 				1BEB8E0922524CB3004FA348 /* Info.plist */,
@@ -282,6 +298,7 @@
 				1B69946B2280715D00B46A0D /* DateUtility.swift in Sources */,
 				1B939B2A229C377B008589E6 /* LocationUtility.swift in Sources */,
 				1B928875225B86F500222CB7 /* SplashController.swift in Sources */,
+				1B716B8522C151DC00B89748 /* ProfileController.swift in Sources */,
 				1BFACB45229302C000DE0121 /* Database.swift in Sources */,
 				1B69946F2280879200B46A0D /* DettaglioEventoController.swift in Sources */,
 				1B71906922C10FE600E21DC5 /* CartController.swift in Sources */,
@@ -301,6 +318,7 @@
 				1BFACB412292F22100DE0121 /* UIUtility.swift in Sources */,
 				1B71906D22C10FF300E21DC5 /* CellCarrello.swift in Sources */,
 				1B71907022C110FE00E21DC5 /* Sound.swift in Sources */,
+				1B716B8222C1473500B89748 /* BenvenutoController.swift in Sources */,
 				1B0CC2442289AD840088054C /* CellOggettoAcquistabile.swift in Sources */,
 				1B0CC2422289A68E0088054C /* OggettoAcquistabile.swift in Sources */,
 				1B69946922806E6300B46A0D /* NetworkUtility.swift in Sources */,

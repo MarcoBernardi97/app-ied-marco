@@ -27,4 +27,12 @@ class NetworkParser {
         
         return meteo
     }
+    
+    static func parseUtente(conData data: IEDDictionary)-> Utente? {
+        
+        let utente = Utente()
+        
+        
+        return utente
+    }
 }
