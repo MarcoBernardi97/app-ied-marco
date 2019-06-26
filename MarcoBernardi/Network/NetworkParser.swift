@@ -32,6 +32,13 @@ class NetworkParser {
         
         let utente = Utente()
         
+        utente.nome = data["nome"] as? String
+        utente.dataNascita = data["dataNascita"] as? String
+        utente.citta = data["citta"] as? String
+        utente.credito = data["credito"] as? Int
+        utente.timestamp = data["timestamp"] as? String
+        utente.email = data["email"] as? String
+        utente.avatarUrl = data["avatarUrl"] as? String
         
         return utente
     }

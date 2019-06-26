@@ -11,7 +11,6 @@ import UIKit
 class Utente {
     
     var id: Int?
-    
     var nome: String?
     var cognome: String?
     
@@ -19,4 +18,8 @@ class Utente {
     var password: String?
     
     var avatarUrl: String?
+    var credito: Int?
+    var citta: String?
+    var dataNascita: String?
+    var timestamp: String?
 }

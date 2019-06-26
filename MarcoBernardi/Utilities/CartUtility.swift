@@ -33,6 +33,13 @@ class CartUtility {
         print ("L'oggetto è stato aggiunto al carrello")
     }
     
+    //funzione che rimuove l'oggetto dal carrello
+    static func rimuoviDalCarrello(_ oggetto: OggettoAcquistabile){
+        if let index = carrello.index(of: oggetto){
+            carrello.remove(at: index)
+        }
+    }
+    
     //Funzione che setta l'icona corretta per il carrello
     static func iconaCarrello() ->UIImage?{
         
@@ -40,10 +47,10 @@ class CartUtility {
         
         if carrello.count > 0{
             //carrello pieno
-            image = UIImage(named: "full")
+            image = UIImage(named: "iconCartFull")
         } else{
             //carrello vuoto
-            image = UIImage(named: "empty")
+            image = UIImage(named: "iconCartEmpty")
         }
         
         //Ridimensiono l'immagine
