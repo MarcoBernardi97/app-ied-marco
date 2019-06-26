@@ -10,10 +10,12 @@ import UIKit
 
 class ProfileController: UIViewController {
 
+    @IBOutlet weak var labelNome: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       labelNome.text = "ciao"
     }
 
    

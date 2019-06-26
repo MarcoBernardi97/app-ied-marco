@@ -304,7 +304,6 @@
         <!--Profile Controller-->
         <scene sceneID="y4Z-Aq-htX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v5b-yY-n3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProfileController" id="DgK-0n-jyh" userLabel="Profile Controller" customClass="ProfileController" customModule="MarcoBernardi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evT-HJ-XPD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -330,7 +329,11 @@
                         <viewLayoutGuide key="safeArea" id="KDb-5i-XKv"/>
                     </view>
                     <navigationItem key="navigationItem" id="TCp-Wm-QTK"/>
+                    <connections>
+                        <outlet property="labelNome" destination="yS0-Wz-cDg" id="Muy-xI-Tvk"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5b-yY-n3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6288.8000000000002" y="-1034.0329835082459"/>
         </scene>
@@ -842,7 +845,6 @@
         <!--Item-->
         <scene sceneID="kyF-fF-0e3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eH3-eL-pin" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="gZn-Wg-yiJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pPD-oa-9cG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F53-of-frD">
@@ -853,6 +855,7 @@
                         <segue destination="DgK-0n-jyh" kind="relationship" relationship="rootViewController" id="qPa-2G-oxb"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eH3-eL-pin" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5350" y="-1034"/>
         </scene>
