@@ -12,4 +12,5 @@ import UIKit
 
 class LoginUtility {
     static var utenteConnesso: Utente? = Utente()
+    
 }

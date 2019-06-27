@@ -20,6 +20,6 @@ class Utente {
     var avatarUrl: String?
     var credito: Int?
     var citta: String?
-    var dataNascita: String?
+    var data_nascita: String?
     var timestamp: String?
 }

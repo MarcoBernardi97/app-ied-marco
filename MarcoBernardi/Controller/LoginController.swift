@@ -32,9 +32,7 @@ class LoginController: UIViewController {
         textPassword.layer.cornerRadius = textPassword.frame.size.height/2
         textPassword.layer.masksToBounds = true
         
-        //arrotondare angoli button accedi
-        buttonAccedi.layer.cornerRadius = 10
-        buttonAccedi.layer.masksToBounds = true
+        UIUtility.arrotondaAngoli(buttonAccedi, raggio: 16.0)
 
        
     }

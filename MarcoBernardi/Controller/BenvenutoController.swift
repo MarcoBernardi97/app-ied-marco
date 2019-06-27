@@ -22,8 +22,7 @@ class BenvenutoController: UIViewController {
         imageIcon.layer.cornerRadius = 20
         imageIcon.layer.masksToBounds = true
         
-        buttonAccedi.layer.cornerRadius = 10
-        buttonAccedi.layer.masksToBounds = true
+        UIUtility.arrotondaAngoli(buttonAccedi, raggio: 16.0)
         
     }
     
