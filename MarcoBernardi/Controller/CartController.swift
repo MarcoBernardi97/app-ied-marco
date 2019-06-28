@@ -36,7 +36,7 @@ class CartController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //titolo
         if(CartUtility.carrello.count > 0) {
             let numeroArticoli = CartUtility.carrello.count
-            navigationItem.title = "Carrello"
+            navigationItem.title = "Carrello (\(numeroArticoli))"
         }
         else {
             navigationItem.title = "Carrello"

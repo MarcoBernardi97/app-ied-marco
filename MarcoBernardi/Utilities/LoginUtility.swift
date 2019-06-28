@@ -11,6 +11,6 @@ import UIKit
 //Classe che semplifica l'interazione con il database per capire se c'è un utente connesso all'app
 
 class LoginUtility {
-    static var utenteConnesso: Utente? = Utente()
+    static var utenteConnesso: Utente?
     
 }

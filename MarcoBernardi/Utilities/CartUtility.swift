@@ -28,7 +28,7 @@ class CartUtility {
         }
         //2.Aggiungi l'oggetto al carrello
         carrello.append(oggetto)
-        Sound.play(file: "18V_Cordless_Drill_Switch.mp3")
+        Sound.play(file: "addToCart.wav")
         
         print ("L'oggetto è stato aggiunto al carrello")
     }

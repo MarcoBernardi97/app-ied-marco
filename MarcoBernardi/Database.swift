@@ -28,7 +28,7 @@ class Database {
         acquistabileUno.nome = "Pista"
         acquistabileUno.quantita = 400
         acquistabileUno.prezzo = 50.00
-        acquistabileUno.immagineURL = "https://images.unsplash.com/photo-1507638136177-1e4d9d20bd31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1362&q=80"
+        acquistabileUno.immagineURL = "https://www.lastampa.it/rf/image_lowres/Pub/p4/2019/04/15/Cronaca/Foto/RitagliWeb/ac9f5500-5f87-11e9-b8e0-4dedb7c00f9c_queever-krgF-U11202961477344zVG-1024x576%40LaStampa.it.jpg"
         
         let acquistabileDue = OggettoAcquistabile()
         acquistabileDue.nome = "Posti rialzati"
@@ -75,7 +75,7 @@ class Database {
         eventi.append(eventoDue)
         
         let eventoTre = Evento()
-        eventoTre.nome = "Harley Davidson Club"
+        eventoTre.nome = "Harley Davidson Reunion"
         eventoTre.data = Date()
         eventoTre.indirizzo = "Lido di Ostia"
         eventoTre.coordinate = CLLocationCoordinate2D.init(latitude: 45.4640658, longitude: 9.1906621)
@@ -88,6 +88,8 @@ class Database {
         acquistabileSei.quantita = 200
         acquistabileSei.prezzo = 25.00
         acquistabileSei.immagineURL = "https://static2-viaggi.corriereobjects.it/wp-content/uploads/2013/12/harley-roma-01.jpg"
+        
+        eventoTre.oggettiAcquistabili = [acquistabileSei]
         
         
         eventi.append(eventoTre)

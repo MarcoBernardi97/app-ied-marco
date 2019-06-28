@@ -32,6 +32,8 @@ class CellOggettoAcquistabile: UICollectionViewCell {
             labelPrezzo.text = "Gratis"
         }
         
+        UIUtility.arrotondaAngoli(containerPrezzo, raggio: 8.0)
+        
         //Prendo la quantità dall'HomeController
         if let quantita = oggettoDaRappresentare?.quantita, quantita > 0 {
             if quantita == 1 {
