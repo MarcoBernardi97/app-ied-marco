@@ -102,7 +102,7 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
         
         //lo aggiungo alla mappa
         mappaEvento.addAnnotation(pin)
-        
+         
         if let coordinate = evento.coordinate {
             let camera = mappaEvento.camera
             camera.centerCoordinate = coordinate
