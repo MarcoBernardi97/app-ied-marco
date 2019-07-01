@@ -19,8 +19,9 @@ class BenvenutoController: UIViewController {
     override func viewDidLoad(){
         
         super.viewDidLoad()
-        imageIcon.layer.cornerRadius = 20
-        imageIcon.layer.masksToBounds = true
+       
+        
+        UIUtility.arrotondaAngoliCerchio(imageIcon)
         
         UIUtility.arrotondaAngoli(buttonAccedi, raggio: 16.0)
         

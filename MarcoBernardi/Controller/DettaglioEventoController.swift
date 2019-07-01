@@ -36,6 +36,7 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBOutlet weak var buttonCarrello: UIButton!
     
+    @IBOutlet weak var mappaEvento: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -158,6 +159,14 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBAction func aggiungiAlCarrello(_ sender: Any){
         chiediConfermaAcquisto(oggetto: evento)
+    }
+    
+    @IBAction func navigaVerso(_ sender: Any) {
+        AlertUtility.mostraAlertDiConferma(conTitolo: "Vuoi avere le indicazione per arrrivare all'evento?", messaggio: evento?.indirizzo, viewController: self) { (sceltaUtente) in
+            if sceltaUtente {
+                LocationUtility.navigaVerso(evento: self.evento)
+            }
+        }
     }
     
     

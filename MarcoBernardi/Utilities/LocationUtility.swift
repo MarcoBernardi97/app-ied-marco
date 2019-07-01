@@ -28,5 +28,32 @@ class LocationUtility {
         
         return locationDa.distance(from: locationA)
     }
+    
+    static func navigaVerso(evento: Evento?) {
+        
+        guard let coordinate = evento?.coordinate, controlloCordinate(coordinate) else {
+            return
+        }
+        
+        let placemark = MKPlacemark(coordinate:coordinate)
+        let item = MKMapItem(placemark : placemark)
+        
+        item.name = evento?.nome
+        
+        item.openInMaps(launchOptions: nil)
+    }
+    
+    static func controlloCordinate(_ coordinate: CLLocationCoordinate2D?) -> Bool {
+        guard let coordinate = coordinate else {
+            return false
+        }
+        guard CLLocationCoordinate2DIsValid(coordinate) else {
+            return false
+        }
+        guard coordinate.latitude != 0.0, coordinate.longitude != 0.0 else {
+            return false
+        }
+        return true
+    }
 
 }

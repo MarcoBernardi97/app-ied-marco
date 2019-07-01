@@ -388,14 +388,14 @@
             <objects>
                 <viewController storyboardIdentifier="DettaglioEventoController" id="YdV-HZ-8LH" customClass="DettaglioEventoController" customModule="MarcoBernardi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WIr-Ld-yry">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn6-jX-VfQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1280"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-Yo-35N">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1280"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he5-vT-sQd">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
@@ -591,6 +591,12 @@
                                                     <constraint firstAttribute="trailing" secondItem="MLE-dK-3pn" secondAttribute="trailing" constant="16" id="uN2-HB-H6U"/>
                                                 </constraints>
                                             </view>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fyU-9S-Ls1">
+                                                <rect key="frame" x="24" y="998" width="327" height="230"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="230" id="Ns1-SQ-avP"/>
+                                                </constraints>
+                                            </mapView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -598,8 +604,11 @@
                                             <constraint firstItem="he5-vT-sQd" firstAttribute="top" secondItem="AYL-Yo-35N" secondAttribute="top" id="9Jg-pB-Nqz"/>
                                             <constraint firstItem="XN3-jb-SDJ" firstAttribute="top" secondItem="ycz-gl-iss" secondAttribute="bottom" id="BdN-uC-CDg"/>
                                             <constraint firstItem="fCK-98-VLe" firstAttribute="top" secondItem="XN3-jb-SDJ" secondAttribute="bottom" id="DqN-Mg-jV9"/>
+                                            <constraint firstAttribute="trailing" secondItem="fyU-9S-Ls1" secondAttribute="trailing" constant="24" id="EA6-Dc-v6O"/>
                                             <constraint firstAttribute="trailing" secondItem="he5-vT-sQd" secondAttribute="trailing" id="EEX-KD-h4d"/>
+                                            <constraint firstItem="fyU-9S-Ls1" firstAttribute="leading" secondItem="AYL-Yo-35N" secondAttribute="leading" constant="24" id="HsW-9K-JAn"/>
                                             <constraint firstItem="XN3-jb-SDJ" firstAttribute="leading" secondItem="AYL-Yo-35N" secondAttribute="leading" constant="24" id="LzF-6f-0lF"/>
+                                            <constraint firstAttribute="bottom" secondItem="fyU-9S-Ls1" secondAttribute="bottom" constant="52" id="PL3-cH-4Xl"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fCK-98-VLe" secondAttribute="bottom" id="Tn5-PU-Pzw"/>
                                             <constraint firstItem="fCK-98-VLe" firstAttribute="leading" secondItem="AYL-Yo-35N" secondAttribute="leading" id="baZ-6U-ScO"/>
                                             <constraint firstItem="ycz-gl-iss" firstAttribute="leading" secondItem="AYL-Yo-35N" secondAttribute="leading" id="d3S-bY-SlH"/>
@@ -607,6 +616,7 @@
                                             <constraint firstAttribute="trailing" secondItem="XN3-jb-SDJ" secondAttribute="trailing" constant="24" id="uFS-In-wpt"/>
                                             <constraint firstItem="ycz-gl-iss" firstAttribute="top" secondItem="he5-vT-sQd" secondAttribute="bottom" id="vr5-sF-Bot"/>
                                             <constraint firstAttribute="trailing" secondItem="fCK-98-VLe" secondAttribute="trailing" id="wA5-UP-Kvy"/>
+                                            <constraint firstItem="fyU-9S-Ls1" firstAttribute="top" secondItem="fCK-98-VLe" secondAttribute="bottom" constant="18" id="wte-NX-Pr9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -629,7 +639,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gkE-uI-EnS"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1300"/>
                     <connections>
                         <outlet property="buttonCarrello" destination="JFG-ov-GqC" id="XS6-Fh-648"/>
                         <outlet property="collectionView" destination="XN3-jb-SDJ" id="H82-4M-oe8"/>
@@ -641,6 +651,7 @@
                         <outlet property="labelMeteo" destination="gMm-e6-D36" id="dXX-fm-Hin"/>
                         <outlet property="labelNome" destination="80z-wS-RzV" id="JLE-83-hrU"/>
                         <outlet property="labelPrezzo" destination="Nzz-LZ-JBP" id="Jmw-j7-eCV"/>
+                        <outlet property="mappaEvento" destination="fyU-9S-Ls1" id="ydW-Wp-ot2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03c-Lw-xRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
