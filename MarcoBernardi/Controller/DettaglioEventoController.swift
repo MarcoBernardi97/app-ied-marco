@@ -97,6 +97,19 @@ class DettaglioEventoController: UIViewController, UICollectionViewDelegate, UIC
             }
         }
         
+        //creo il pin
+        let pin = PinMappa.init(conEvento : evento)
+        
+        //lo aggiungo alla mappa
+        mappaEvento.addAnnotation(pin)
+        
+        if let coordinate = evento.coordinate {
+            let camera = mappaEvento.camera
+            camera.centerCoordinate = coordinate
+            camera.altitude = 500
+        }
+        mappaEvento.showsUserLocation = true
+        
     }
     
     //MARK: - CollctionView delegate

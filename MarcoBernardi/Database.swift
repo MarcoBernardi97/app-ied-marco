@@ -18,7 +18,7 @@ class Database {
         eventoUno.nome = "Concerto Avicii"
         eventoUno.data = DateUtility.data(conStringa: "08/09/2020 20:30", formato: "dd/MM/yyyy HH:mm")
         eventoUno.indirizzo = "V.le Oceano Atlantico"
-        eventoUno.coordinate = CLLocationCoordinate2D.init(latitude: 41.8192529, longitude: 12.4674779)
+        eventoUno.coordinate = CLLocationCoordinate2D.init(latitude: 41.6340992, longitude: 12.4987313)
         eventoUno.prezzo = 45.0
         eventoUno.immagineURL = "https://cdn.wegow.com/media/artists/avicii/avicii-1496218027.41.2560x1440.jpg"
         eventoUno.descrizione = "L'esibizione inizia alle ore 20.30"
@@ -45,7 +45,7 @@ class Database {
         eventoDue.nome = "Partita del cuore"
         eventoDue.data = Date()
         eventoDue.indirizzo = "Stadio Olimpico di Roma"
-        eventoDue.coordinate = CLLocationCoordinate2D.init(latitude: 41.8887741, longitude: 12.524077799999999)
+        eventoDue.coordinate = CLLocationCoordinate2D.init(latitude: 41.9339521, longitude: 12.4547231)
         eventoDue.prezzo = 15.0
         eventoDue.immagineURL = "http://www.sanfrancescocalcio.it/wp-content/uploads/2017/09/campnou.jpg"
         eventoDue.descrizione = "L'inizio della partita è previsto alle 20:45. Al termine i giocatori faranno un giro di campo per ringraziare gli spettatori"
@@ -78,7 +78,7 @@ class Database {
         eventoTre.nome = "Harley Davidson Reunion"
         eventoTre.data = Date()
         eventoTre.indirizzo = "Lido di Ostia"
-        eventoTre.coordinate = CLLocationCoordinate2D.init(latitude: 45.4640658, longitude: 9.1906621)
+        eventoTre.coordinate = CLLocationCoordinate2D.init(latitude: 41.7325672, longitude: 12.2787587)
         eventoTre.prezzo = 30.0
         eventoTre.immagineURL = "http://static.nextmoto.it/625X0/www/nextmoto/it/img/HarleyDavidson_OnTheRoad.jpg"
         eventoTre.descrizione = "Appuntamento alle 9:00 al pontile di Ostia. Dopo una passeggiata sul lungomare è previsto un pranzo al sacco per chi lo desidera."
